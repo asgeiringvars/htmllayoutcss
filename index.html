@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digri Brewery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <!-- Logo og Nav-->
+            <a href="#"><img src="/img/digri_logo.png" class="logo" alt="Digri Brewery Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <!-- Content - Beer -->
+        <div class="content">
+            <div class="textBox">
+                <h2>Refreshing<br><span>Beers</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In vero reiciendis eum eaque hic animi facilis assumenda ullam! Minima incidunt soluta ratione omnis quidem, explicabo sunt impedit doloremque id! Unde.</p>
+                <a href="#">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="/img/lawnmower_man_flaska.png" class="beer" alt="Lawnmower Man Flaska">
+            </div>
+        </div>
+        <ul class="thumb">
+    
+            <li><img src="/img/lawnmower_man_flaska.png" onclick="imgSlider('/img/lawnmower_man_flaska.png');changeBgColor('#183457')" alt="Lawnmower Man Flaska" ></li>
+            <li><img src="/img/false_king_flaska.png" onclick="imgSlider('/img/false_king_flaska.png');changeBgColor('#3f200c')" alt="False King Flaska"></li></a>
+            <li><img src="/img/happy_flaska.png" onclick="imgSlider('/img/happy_flaska.png');changeBgColor('#e69121')" alt="Happy Hops Flaska"></li>
+        </ul>
+
+    </section>
+    <!-- Javascript to change background and image on beer -->
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.beer').src = anything;
+    }
+    function changeBgColor(color){
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+    </script>
+</body>
+</html>
